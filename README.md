@@ -1,0 +1,1 @@
+# When-Interaction-Hurts-Signal-Collapse-in-LLM-Based-Multi-Agent-Scientific-Idea-Evaluation
