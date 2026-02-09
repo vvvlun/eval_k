@@ -1,26 +1,6 @@
 """
 Exp 4 Full: Mechanism Comparison - 优化版本
 
-先运行一次4个Expert Agents评估，然后复用结果计算各机制。
-
-流程：
-1. 对每篇论文运行4个Expert Agents（只跑一次）
-2. 基于同一份评估结果计算各机制：
-   - M1: 简单平均（无需额外LLM）
-   - M2: confidence加权（无需额外LLM）
-   - M3: 调Chair Agent（+1次LLM）
-   - M4: 迭代更新（+12次LLM，3轮×4维度）
-   - M5: 调2个generalist（+2次LLM）
-
-LLM调用次数：
-- Step 1: 4次/paper (共用)
-- M1: 0次额外
-- M2: 0次额外  
-- M3: 1次额外
-- M4: 12次额外
-- M5: 2次额外
-- 总计: 19次/paper (vs 35次/paper 如果重复跑)
-
 使用方法：
     python exp4_full.py \
         --papers ./data/raw/iclr_papers \
@@ -1185,4 +1165,5 @@ def main():
 
 
 if __name__ == '__main__':
+
     main()
