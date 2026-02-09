@@ -1,39 +1,5 @@
 """
 Experiment 2: Quality-Impact Alignment Validation
-
-验证桥梁假设：论文的审稿评分与长期影响力（引用）显著正相关。
-如果这个假设成立，后续实验的"减少估计误差→更好识别影响力"逻辑才有意义。
-
-Usage:
-    # 基本用法
-    python exp2_quality_impact.py \
-        --citation-dir ./data/iclr_cite_analys \
-        --review-dir ./data/iclr_review_analys \
-        --agent-dir ./data/results \
-        --output ./data/results/exp2_quality_impact.json
-    
-    # 指定年份范围
-    python exp2_quality_impact.py \
-        --citation-dir ./data/iclr_cite_analys \
-        --review-dir ./data/iclr_review_analys \
-        --agent-dir ./data/results \
-        --years 2018 2019 2020 2021 2022 \
-        --output ./data/results/exp2_quality_impact.json
-    
-    # 指定agent模型
-    python exp2_quality_impact.py \
-        --citation-dir ./data/iclr_cite_analys \
-        --review-dir ./data/iclr_review_analys \
-        --agent-dir ./data/results \
-        --agent-model llama8b \
-        --output ./data/results/exp2_quality_impact.json
-
-Output:
-    - JSON结果文件包含：
-      - 整体相关性分析
-      - 按年份分层分析
-      - 按决策分层分析
-      - LaTeX表格格式输出
 """
 
 import os
@@ -1066,4 +1032,5 @@ Examples:
 
 
 if __name__ == '__main__':
+
     main()
