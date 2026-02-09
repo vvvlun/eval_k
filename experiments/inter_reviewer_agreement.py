@@ -1,31 +1,5 @@
 """
 Inter-Reviewer Agreement Calculator
-
-计算审稿人之间的一致性（作为多智能体系统一致性的参考基准）。
-
-计算方式：
-- rating >= 6 视为接受（Accept）
-- rating < 6 视为拒稿（Reject）
-- 计算每篇论文的审稿人一致性，然后汇总
-
-指标：
-- Agreement Rate: 所有审稿人都同意的论文比例
-- Fleiss' Kappa: 多评分者一致性指标（适用于 >2 个评分者）
-- Pairwise Agreement: 成对一致的平均比例
-
-Usage:
-    # 计算单个文件
-    python inter_reviewer_agreement.py --data ./data/raw/openreview/iclr_2018.json
-    
-    # 计算整个目录（自动识别 iclr_*.json 和 neurips_*.json）
-    python inter_reviewer_agreement.py --data-dir ./data/raw/openreview --output ./data/results
-    
-    # 指定年份范围
-    python inter_reviewer_agreement.py --data-dir ./data/raw/openreview --iclr-years 2018 2019 2020
-
-Output:
-    - 控制台输出各年份和总体的一致性指标
-    - JSON 文件保存详细结果
 """
 
 import os
