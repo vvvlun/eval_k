@@ -1,18 +1,5 @@
 """
 Exp 4: Mechanism Comparison - 机制比较主实验
-
-比较5种聚合机制在识别高影响力论文上的表现。
-
-机制定义：
-| ID | 名称 | 公式 | 需要LLM |
-|----|------|------|---------|
-| M1 | Simple Average | θ̂ = (1/n)Σs_d | ❌ |
-| M2 | Confidence-Weighted | θ̂ = Σ(c_d*s_d)/Σc_d | ✅ 需要获取confidence |
-| M2v| Dimension-Weighted | θ̂ = Σ(w_d*s_d) 固定权重 | ❌ |
-| M3 | AC-Centric | Chair Agent综合决策 | ❌ 用已有结果 |
-| M4 | Bounded Iteration | 3轮讨论后聚合 | ✅ 需要迭代 |
-| M5 | Diverse Ensemble | M2 + 2个通才Agent | ✅ 需要通才Agent |
-
 使用方法：
     # 只运行不需要LLM的机制 (M1, M2v, M3)
     python exp4_mechanism_comparison.py \
