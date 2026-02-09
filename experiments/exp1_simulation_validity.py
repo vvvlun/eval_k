@@ -1,21 +1,5 @@
 """
 Experiment 1: Simulation Validity Test
-
-验证多智能体系统能否有效模拟人类审稿决策。
-
-Usage:
-    # 测试10篇论文
-    python exp1_simulation_validity.py --data ./data/raw/openreview/iclr_2018.json --limit 10 --model llama3.1:8b
-    
-    # 完整实验
-    python exp1_simulation_validity.py --data ./data/raw/openreview/iclr_2018.json --model llama3.1:70b
-    
-    # 使用qwen
-    python exp1_simulation_validity.py --data ./data/raw/openreview/iclr_2018.json --model qwen2.5:72b
-
-Output:
-    保存至: {output}/exp1_results_{timestamp}.json
-    包含: 评估指标、每篇论文的决策详情
 """
 
 import os
