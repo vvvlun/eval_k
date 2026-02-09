@@ -1,45 +1,5 @@
 """
 Experiment 3: Diversity-Performance Relationship Validation
-
-验证核心定理：Diversity（低相关性 ρ̄）与估计性能的关系。
-理论预测：ρ̄ ↓ → MSE ↓ → 与影响力相关性 ↑
-
-Part A: 测量Agent Diversity
-- 计算4个Expert Agents评分的相关性矩阵
-- 对比人类审稿者相关性
-
-Part B: 人为改变Diversity验证理论
-- 不同diversity水平的配置
-- 验证 ρ̄ 与 performance 的负相关关系
-
-Usage:
-    # Part A only - 使用已有的agent评分数据
-    python exp3_diversity_performance.py --mode part_a \
-        --agent-results ./data/results \
-        --ground-truth ./ground_truth/iclr_ground_truth.json \
-        --output ./data/results/exp3_diversity.json
-
-    # Part B - 运行不同diversity配置（需要LLM）
-    python exp3_diversity_performance.py --mode part_b \
-        --ground-truth ./ground_truth/iclr_ground_truth.json \
-        --model llama3.1:70b \
-        --output ./data/results/exp3_diversity.json \
-        --limit 200
-
-    # Full experiment
-    python exp3_diversity_performance.py --mode full \
-        --agent-results ./data/results \
-        --ground-truth ./ground_truth/iclr_ground_truth.json \
-        --model llama3.1:70b \
-        --output ./data/results/exp3_diversity.json
-
-Output:
-    JSON文件包含：
-    - agent_correlation_matrix: 4x4相关性矩阵
-    - agent_rho_bar: Agent平均相关性
-    - human_rho_bar: 人类审稿者平均相关性
-    - diversity_performance_results: 不同配置的实验结果
-    - theorem_verification: 理论验证结果
 """
 
 import os
